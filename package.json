@@ -1,0 +1,59 @@
+{
+	"name": "bump",
+	"displayName": "bump",
+	"description": "bump version",
+	"version": "0.0.1",
+	"engines": {
+		"vscode": "^1.33.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"onCommand:bump.default",
+		"onCommand:bump.patch",
+		"onCommand:bump.minor",
+		"onCommand:bump.major"
+	],
+	"main": "./out/extension.js",
+	"contributes": {
+		"commands": [
+			{
+				"command": "bump.default",
+				"title": "Bump"
+			},
+			{
+				"command": "bump.patch",
+				"title": "Bump Patch"
+			},
+			{
+				"command": "bump.minor",
+				"title": "Bump Minor"
+			},
+			{
+				"command": "bump.major",
+				"title": "Bump Major"
+			}
+		]
+	},
+	"scripts": {
+		"vscode:prepublish": "yarn run compile",
+		"compile": "tsc -p ./",
+		"watch": "tsc -watch -p ./",
+		"postinstall": "node ./node_modules/vscode/bin/install",
+		"test": "yarn run compile && node ./node_modules/vscode/bin/test"
+	},
+	"devDependencies": {
+		"@types/mocha": "^2.2.42",
+		"@types/node": "^10.12.21",
+		"tslint": "^5.12.1",
+		"typescript": "^3.3.1",
+		"vscode": "^1.1.28"
+	},
+	"dependencies": {
+		"@types/execa": "^0.9.0",
+		"@types/semver": "^6.0.0",
+		"execa": "^1.0.0",
+		"semver": "^6.0.0"
+	}
+}
