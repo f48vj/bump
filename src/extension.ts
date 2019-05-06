@@ -35,7 +35,7 @@ async function bump(release: ReleaseType) {
   const { stdout } = await shell(
     `cd ${
       workspaceFolder.uri.path
-    } && git add VERSION && git commit -m "Bump Version to ${newVersion}"`
+    } && git add VERSION && git commit -m "v${newVersion}"`
   );
   console.log(stdout);
 }

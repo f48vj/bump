@@ -2,7 +2,13 @@
 	"name": "bump",
 	"displayName": "bump",
 	"description": "bump version",
-	"version": "0.0.1",
+	"version": "0.1.0",
+	"publisher": "f48vj",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/f48vj/bump.git"
+	},
+	"license": "MIT",
 	"engines": {
 		"vscode": "^1.33.0"
 	},
